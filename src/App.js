@@ -25,7 +25,7 @@ class App extends Component {
               className="working"
               onClick={this.handleClick}
               >
-              Button
+              CHANGE DIRECTION
             </button>
           </header>
           <Lamp on />
