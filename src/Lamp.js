@@ -10,6 +10,7 @@ class Lamp extends Component {
       handleClick = () => {
           this.setState({ on: !this.state.on });
         console.log(`Button clicked`);
+        console.log(this.state)
       };
   render() {
     const light = this.props.on ? 'on' : 'off';
