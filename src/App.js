@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Lamp from './Lamp';
 import Quotes from "./Quotes";
+import Avatar from './Avatar';
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,21 @@ class App extends Component {
       console.log(this.state.working));
   }
   render() {
+    const bart = {
+      image: "https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png",
+      firstName: "Bart",
+      lastName: "Simpson"
+    };
+    const lisa = {
+      image: "https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/Lisa_Simpson.png/220px-Lisa_Simpson.png",
+      firstName: "Lisa",
+      lastName: "Simpson"
+    };
+    const homer = {
+      image: "https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png",
+      firstName: "Homer",
+      lastName: "Simpson"
+    };
     return (
         <div className="App">
           <header className="App-header">
@@ -28,9 +44,10 @@ class App extends Component {
               CHANGE DIRECTION
             </button>
           </header>
-          <Lamp on />
-          <Lamp />
-          <Quotes />
+          <Lamp on/>
+          <Avatar {...bart} />
+          <Avatar {...lisa} />
+          <Avatar {...homer} />
           </div>
     );
   }
